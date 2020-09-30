@@ -7,6 +7,8 @@ class App
     public function __construct()
     {
         echo "App is running succesfully";
+        $url = $this->parseUrl();
+        print_r($url);
     }
     public function parseUrl()
     {
