@@ -23,6 +23,9 @@ class App
             }
         }
         echo $this->method;
+
+        $this->params = $url ? array_values($url) : [];
+        print_r($this->params);
     }
     public function parseUrl()
     {
