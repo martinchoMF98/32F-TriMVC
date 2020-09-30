@@ -1,5 +1,6 @@
 <?php
-class App {
+class App
+{
     protected $contoller = 'home';
     protected $method = 'index';
     protected $params = [];
@@ -7,5 +8,10 @@ class App {
     {
         echo "App is running succesfully";
     }
+    public function parseUrl()
+    {
+        if (isset($_GET['url'])) {
+            return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+        }
+    }
 }
-?>
